@@ -64,7 +64,7 @@ class FetchProductSummariesAction
                     products
                 LEFT JOIN product_categories sub_product_categories ON
                     products.product_category_id = sub_product_categories.id
-                LEFT JOIN (
+                JOIN (
                     SELECT
                         order_line_items.product_id,
                         order_line_items.quantity,
